@@ -1,15 +1,9 @@
 import * as functions from "firebase-functions";
-import express from "express";
-import cors from "cors";
+import * as admin from "firebase-admin";
 
-const app = express();
+admin.initializeApp();
 
-// allow any origin — or lock down to your domains if you prefer
-app.use(cors({ origin: true }));
-
-app.get("/", (req, res) => {
-  res.send("Hello from Firebase!");
+export const helloWorld = functions.https.onCall(() => {
+  return {message: "Hello from Firebase Functions!"};
 });
-
-export const helloWorld = functions.https.onRequest(app);
 

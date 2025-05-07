@@ -1,0 +1,20 @@
+[
+  {
+    "winner": "Frank Hao",
+    "opponent": "Robert Perry",
+    "sets": ["6-4", "6-3"],
+    "date": "2025-04-06"
+  },
+  {
+    "winner": "Steven Orbuch",
+    "opponent": "Jon Trapse",
+    "sets": ["6-1", "3-6", "1-0"],
+    "date": "2025-04-07"
+  },
+  {
+    "winner": "Tom Sullivan",
+    "opponent": "Eric Bilotta",
+    "sets": ["6-1", "6-2"],
+    "date": "2025-04-08"
+  }
+]

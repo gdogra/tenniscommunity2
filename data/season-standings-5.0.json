@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Frank Hao",
+    "match_wins": 5,
+    "match_losses": 1,
+    "match_win_pct": 83.33,
+    "game_win_pct": 58.6,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Steven Orbuch",
+    "match_wins": 4,
+    "match_losses": 1,
+    "match_win_pct": 80.0,
+    "game_win_pct": 54.4,
+    "area": "Torrey Highlands"
+  },
+  {
+    "name": "Tom Sullivan",
+    "match_wins": 3,
+    "match_losses": 0,
+    "match_win_pct": 100.0,
+    "game_win_pct": 68.5,
+    "area": "Carmel Valley"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "winner": "Jim Ferguson",
+    "opponent": "Kathy Andrews",
+    "sets": ["7-6", "6-3"],
+    "date": "2025-04-15"
+  },
+  {
+    "winner": "Haoming Chen",
+    "opponent": "Prashant Yadav",
+    "sets": ["6-1", "4-6", "1-0"],
+    "date": "2025-04-19"
+  },
+  {
+    "winner": "Karthik Balasubramanian",
+    "opponent": "Haoming Chen",
+    "sets": ["1-6", "6-2", "10-8"],
+    "date": "2025-04-20"
+  },
+  {
+    "winner": "Daniel Masso",
+    "opponent": "Trey Burleson",
+    "sets": ["6-0", "3-6", "7-6"],
+    "date": "2025-04-21"
+  },
+  {
+    "winner": "Kyron Howard",
+    "opponent": "Angel Martinez",
+    "sets": ["6-7", "6-3", "1-0"],
+    "date": "2025-04-24"
+  },
+  {
+    "winner": "Prashant Yadav",
+    "opponent": "Kathy Andrews",
+    "sets": ["6-1", "6-2"],
+    "date": "2025-04-23"
+  },
+  {
+    "winner": "Prashant Yadav",
+    "opponent": "Karthik Balasubramanian",
+    "sets": ["6-4", "3-6", "1-0"],
+    "date": "2025-04-26"
+  },
+  {
+    "winner": "Daniel Masso",
+    "opponent": "Cynthia Hanson",
+    "sets": ["6-1", "6-2"],
+    "date": "2025-04-30"
+  },
+  {
+    "winner": "Jim Ferguson",
+    "opponent": "Trey Burleson",
+    "sets": ["3-6", "6-4", "1-0"],
+    "date": "2025-05-02"
+  }
+]

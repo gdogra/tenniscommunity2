@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Daniel Masso",
+    "match_wins": 2,
+    "match_losses": 0,
+    "match_win_pct": 100.0,
+    "game_win_pct": 65.1,
+    "area": "Rancho Bernardo"
+  },
+  {
+    "name": "Jim Ferguson",
+    "match_wins": 2,
+    "match_losses": 0,
+    "match_win_pct": 100.0,
+    "game_win_pct": 54.8,
+    "area": "Mission Hills"
+  },
+  {
+    "name": "Prashant Yadav",
+    "match_wins": 2,
+    "match_losses": 1,
+    "match_win_pct": 66.67,
+    "game_win_pct": 54.7,
+    "area": "La Jolla/UTC"
+  },
+  {
+    "name": "Kyron Howard",
+    "match_wins": 1,
+    "match_losses": 0,
+    "match_win_pct": 100.0,
+    "game_win_pct": 56.5,
+    "area": "El Cajon"
+  },
+  {
+    "name": "Haoming Chen",
+    "match_wins": 1,
+    "match_losses": 1,
+    "match_win_pct": 50.0,
+    "game_win_pct": 52.9,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Karthik Balasubramanian",
+    "match_wins": 1,
+    "match_losses": 1,
+    "match_win_pct": 50.0,
+    "game_win_pct": 50.9,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Eric Townsend",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Del Cerro"
+  },
+  {
+    "name": "Trey Burleson",
+    "match_wins": 0,
+    "match_losses": 2,
+    "match_win_pct": 0.0,
+    "game_win_pct": 45.8,
+    "area": "Serra Mesa"
+  },
+  {
+    "name": "Don LaPel",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "North County"
+  },
+  {
+    "name": "Cynthia Hanson",
+    "match_wins": 0,
+    "match_losses": 1,
+    "match_win_pct": 0.0,
+    "game_win_pct": 20.0,
+    "area": "Mission Hills"
+  },
+  {
+    "name": "Xuemei Zhang",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Stephanie Liu",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Del Mar / Sorrento Valley"
+  },
+  {
+    "name": "Maurice Amendolagine",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Peter Curtin",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Peter Vaillancourt",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Del Mar"
+  },
+  {
+    "name": "Justin Cabral",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Kensington"
+  },
+  {
+    "name": "Mish Jinguji",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Bernardo Heights"
+  },
+  {
+    "name": "Angel Martinez",
+    "match_wins": 0,
+    "match_losses": 1,
+    "match_win_pct": 0.0,
+    "game_win_pct": 43.5,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Arkan Abdulrahman",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Mira Mesa"
+  },
+  {
+    "name": "Prashanth Akula",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Rancho Bernardo"
+  },
+  {
+    "name": "Marco Mendez",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Mountain View"
+  },
+  {
+    "name": "Kathy Andrews",
+    "match_wins": 0,
+    "match_losses": 2,
+    "match_win_pct": 0.0,
+    "game_win_pct": 32.4,
+    "area": "Ramona"
+  },
+  {
+    "name": "Tom Rosales",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Oceanside"
+  },
+  {
+    "name": "Gautam Dogra",
+    "match_wins": 0,
+    "match_losses": 0,
+    "match_win_pct": 0.0,
+    "game_win_pct": 0.0,
+    "area": "Carmel Valley"
+  }
+]

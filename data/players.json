@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Mish Jinguji",
+    "matches": 136,
+    "wins": 98,
+    "losses": 38,
+    "win_percent": 72,
+    "area": "Bernardo Heights"
+  },
+  {
+    "name": "Gautam Dogra",
+    "matches": 55,
+    "wins": 5,
+    "losses": 50,
+    "win_percent": 9,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Maurice Amendolagine",
+    "matches": 138,
+    "wins": 72,
+    "losses": 66,
+    "win_percent": 52,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Karthik Balasubramanian",
+    "matches": 7,
+    "wins": 1,
+    "losses": 6,
+    "win_percent": 14,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Xuemei Zhang",
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_percent": null,
+    "area": "Carmel Valley"
+  },
+  {
+    "name": "Eric Townsend",
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_percent": 0,
+    "area": "Del Cerro"
+  },
+  {
+    "name": "Peter Vaillancourt",
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_percent": null,
+    "area": "Del Mar"
+  },
+  {
+    "name": "Stephanie Liu",
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_percent": null,
+    "area": "Del Mar / Sorrento Valley"
+  },
+  {
+    "name": "Kyron Howard",
+    "matches": 7,
+    "wins": 3,
+    "losses": 4,
+    "win_percent": 43,
+    "area": "El Cajon"
+  },
+  {
+    "name": "Justin Cabral",
+    "matches": 27,
+    "wins": 14,
+    "losses": 13,
+    "win_percent": 52,
+    "area": "Kensington"
+  },
+  {
+    "name": "Angel Martinez",
+    "matches": 11,
+    "wins": 5,
+    "losses": 6,
+    "win_percent": 45,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Haoming Chen",
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "win_percent": 50,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Peter Curtin",
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_percent": null,
+    "area": "La Jolla"
+  },
+  {
+    "name": "Prashant Yadav",
+    "matches": 24,
+    "wins": 11,
+    "losses": 13,
+    "win_percent": 46,
+    "area": "La Jolla/UTC"
+  },
+  {
+    "name": "Arkan Abdulrahman",
+    "matches": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_percent": null,
+    "area": "Mira Mesa"
+  },
+  {
+    "name": "Jim Ferguson",
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "win_percent": 100,
+    "area": "Mission Hills"
+  },
+  {
+    "name": "Cynthia Hanson",
+    "matches": 25,
+    "wins": 14,
+    "losses": 11,
+    "win_percent": 56,
+    "area": "Mission Hills"
+  },
+  {
+    "name": "Marco Mendez",
+    "matches": 7,
+    "wins": 5,
+    "losses": 2,
+    "win_percent": 71,
+    "area": "Mountain View"
+  },
+  {
+    "name": "Don LaPel",
+    "matches": 5,
+    "wins": 0,
+    "losses": 5,
+    "win_percent": 0,
+    "area": "North County"
+  },
+  {
+    "name": "Tom Rosales",
+    "matches": 3,
+    "wins": 1,
+    "losses": 2,
+    "win_percent": 33,
+    "area": "Oceanside"
+  },
+  {
+    "name": "Kathy Andrews",
+    "matches": 13,
+    "wins": 0,
+    "losses": 13,
+    "win_percent": 0,
+    "area": "Ramona"
+  },
+  {
+    "name": "Daniel Masso",
+    "matches": 98,
+    "wins": 22,
+    "losses": 76,
+    "win_percent": 22,
+    "area": "Rancho Bernardo"
+  },
+  {
+    "name": "Prashanth Akula",
+    "matches": 7,
+    "wins": 2,
+    "losses": 5,
+    "win_percent": 29,
+    "area": "Rancho Bernardo"
+  },
+  {
+    "name": "Trey Burleson",
+    "matches": 2,
+    "wins": 0,
+    "losses": 2,
+    "win_percent": 0,
+    "area": "Serra Mesa"
+  }
+]

@@ -1,8 +1,8 @@
 // src/hooks/AuthContext.tsx
-"use client";
+'use client';
 
-import { createContext } from "react";
-import { User } from "firebase/auth";
+import { createContext } from 'react';
+import { User } from 'firebase/auth';
 
 interface AuthContextType {
   currentUser: User | null;
@@ -13,4 +13,3 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export default AuthContext;
-
