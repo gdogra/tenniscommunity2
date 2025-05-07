@@ -1,15 +1,19 @@
 // src/hooks/AuthContext.tsx
 'use client';
 
-import { createContext } from 'react';
-import { User } from 'firebase/auth';
+import { createContext, useEffect, useState } from 'react';
+import { onAuthStateChanged, User } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
 
-interface AuthContextType {
-  currentUser: User | null;
-}
+export const AuthContext = createContext<{ user: User | null } | null>(null);
 
-const AuthContext = createContext<AuthContextType>({
-  currentUser: null,
-});
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState<User | null>(null);
 
-export default AuthContext;
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, setUser);
+    return () => unsubscribe();
+  }, []);
+
+  return <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>;
+};

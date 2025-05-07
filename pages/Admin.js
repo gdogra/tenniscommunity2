@@ -1,5 +1,0 @@
-function Admin() {
-  return (
-    <AdminDashboard />);
-
-}

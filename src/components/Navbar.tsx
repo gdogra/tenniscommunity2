@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 'use client';
 
 import Link from 'next/link';
@@ -8,24 +7,28 @@ export default function Navbar() {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="bg-white shadow p-4 flex justify-between items-center mb-6">
-      <Link href="/" className="text-lg font-semibold">
-        Tennis Community
-      </Link>
-      <div className="flex space-x-4">
+    <nav className="sticky top-0 bg-white border-b shadow z-50 p-4 flex justify-between items-center">
+      <div className="space-x-4">
+        <Link href="/dashboard">🏠 Dashboard</Link>
+        <Link href="/leaderboard">🏆 Leaderboard</Link>
+        <Link href="/players">🎾 Players</Link>
+        <Link href="/matches">📅 Matches</Link>
+        {user?.isAdmin && <Link href="/admin">👥 Admin</Link>}
+      </div>
+      <div>
         {user ? (
           <>
-            <Link href="/dashboard">Dashboard</Link>
-            <button onClick={logout} className="bg-red-500 text-white px-3 py-1 rounded">
+            <span className="mr-2">👤 {user.email}</span>
+            <button onClick={logout} className="text-red-600">
               Logout
             </button>
           </>
         ) : (
           <>
-            <Link href="/login">Login</Link>
-            <Link href="/signup" className="bg-green-600 text-white px-3 py-1 rounded">
-              Register
+            <Link href="/login" className="mr-2">
+              Login
             </Link>
+            <Link href="/signup">Register</Link>
           </>
         )}
       </div>
