@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { doc, updateDoc, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { db } from '@/lib/firebase';
 
 export default function AdminUserRow({ user }: { user: any }) {

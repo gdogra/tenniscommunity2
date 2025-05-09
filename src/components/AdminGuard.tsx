@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { getDoc, doc } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
-import { auth, db } from '@/lib/firebase';
+
 
 export default function AdminGuard({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ export default function AdminGuard({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (user) => {
+    const unsub = supabase.auth.onAuthStateChange((event, session) => => {
       if (!user) {
         router.push('/login');
         return;

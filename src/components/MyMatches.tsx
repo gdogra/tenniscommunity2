@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { auth, db } from '@/lib/firebase';
-import { onAuthStateChanged } from 'firebase/auth';
-import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
+
+import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
 import { format, parseISO, isAfter, isBefore } from 'date-fns';
 
 type Match = {
@@ -28,7 +28,7 @@ export default function MyMatches({ highlightId }: { highlightId?: string }) {
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (user) => {
+    const unsub = supabase.auth.onAuthStateChange((event, session) => => {
       if (!user) return;
 
       const playerSnap = await getDocs(

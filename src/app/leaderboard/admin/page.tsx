@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 
 interface Player {
   name: string;

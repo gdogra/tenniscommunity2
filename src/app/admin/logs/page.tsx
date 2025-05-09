@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase';
-import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import AdminGuard from '@/components/AdminGuard';
 import { format } from 'date-fns';
 

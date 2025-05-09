@@ -1,36 +1,17 @@
-import AdminGuard from '@/components/AdminGuard';
+// src/app/admin/layout.tsx
+import React from 'react';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <AdminGuard>
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow">
-          <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-            <h1 className="text-lg font-semibold">🎾 Admin Panel</h1>
-            <nav className="space-x-4 text-sm">
-              <Link href="/admin" className="text-blue-600 hover:underline">
-                Dashboard
-              </Link>
-              <Link href="/leaderboard/admin" className="text-blue-600 hover:underline">
-                Leaderboard
-              </Link>
-              <Link href="/admin/users" className="text-blue-600 hover:underline">
-                Manage Users
-              </Link>
-              <Link href="/admin/logs" className="text-blue-600 hover:underline">
-                Logs
-              </Link>
-              <Link href="/head-to-head" className="text-blue-600 hover:underline">
-                Compare
-              </Link>
-            </nav>
-          </div>
-        </header>
-
-        <main className="max-w-5xl mx-auto px-4 py-6">{children}</main>
-      </div>
-    </AdminGuard>
+    <div className="p-6 max-w-5xl mx-auto">
+      <nav className="mb-6 flex gap-6 border-b pb-4">
+        <Link href="/admin">Dashboard</Link>
+        <Link href="/admin/scores">Manage Scores</Link>
+        <Link href="/admin/seasons">Manage Seasons</Link>
+      </nav>
+      {children}
+    </div>
   );
 }
+

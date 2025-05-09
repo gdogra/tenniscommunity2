@@ -2,13 +2,13 @@
 import Image from 'next/image';
 
 import { useEffect, useState } from 'react';
-import { auth } from '@/lib/firebase';
+
 
 export default function UserProfile() {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const unsub = auth.onAuthStateChanged((firebaseUser) => {
+    const unsub = auth.supabase.auth.onAuthStateChange((event, session) => => {
       if (firebaseUser) {
         setUser(firebaseUser);
       }

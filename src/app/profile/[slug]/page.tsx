@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 

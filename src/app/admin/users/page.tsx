@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { db, auth } from '@/lib/firebase';
-import { collection, getDocs, updateDoc, deleteDoc, doc, addDoc } from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
+import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
 
 export default function AdminUsersPage() {
   const [users, setUsers] = useState<any[]>([]);
@@ -11,7 +11,7 @@ export default function AdminUsersPage() {
   const [adminEmail, setAdminEmail] = useState<string | null>(null);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    supabase.auth.onAuthStateChange((event, session) => => {
       setAdminEmail(user?.email || null);
     });
   }, []);

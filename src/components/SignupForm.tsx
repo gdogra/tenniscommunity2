@@ -2,10 +2,10 @@
 import Image from 'next/image';
 
 import { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { collection, addDoc } from 'firebase/firestore';
-import { auth, storage, db } from '@/lib/firebase';
+import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
+
 import { useRouter } from 'next/navigation';
 
 export default function SignupForm() {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { db } from '@/lib/firebase';
 
 export default function StandingsTable({ division }: { division: string }) {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { collection, getDocs, query, orderBy, where, limit } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { db } from '@/lib/firebase';
 import Link from 'next/link';
 

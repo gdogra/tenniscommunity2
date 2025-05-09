@@ -1,9 +1,9 @@
 'use client';
 
-import { onAuthStateChanged, User } from 'firebase/auth';
+import { supabase } from '@/lib/supabase';
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { auth, db } from '@/lib/firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+
+import { supabase } from '@/lib/supabase';
 
 interface AuthContextType {
   user: User | null;
@@ -17,7 +17,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+    const unsubscribe = supabase.auth.onAuthStateChange((event, session) => => {
       if (firebaseUser) {
         setUser(firebaseUser);
 

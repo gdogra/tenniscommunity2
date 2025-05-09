@@ -6,28 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx --fix",
-    "format": "prettier --write ."
+    "lint": "next lint",
+    "ts-node": "ts-node",
+    "seed:players": "ts-node scripts/seed-players.ts",
+    "seed:dashboard": "ts-node scripts/seed-dashboard.ts",
+    "import:players": "ts-node scripts/import_players.js",
+    "refresh:db": "ts-node scripts/import_all.ts",
+    "setup": "ts-node scripts/setup.ts"
   },
   "dependencies": {
-    "dotenv": "^16.5.0",
-    "firebase": "^10.14.1",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "recharts": "^2.15.3"
+    "@supabase/auth-helpers-nextjs": "^0.8.2",
+    "@supabase/supabase-js": "^2.39.5",
+    "autoprefixer": "^10.4.17",
+    "next": "14.0.4",
+    "postcss": "^8.4.31",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.5",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "latest",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.0.0",
-    "zod": "^3.22.0"
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.11",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
   }
 }
+

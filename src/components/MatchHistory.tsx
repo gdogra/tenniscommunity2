@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { collection, getDocs, query, where, Timestamp, doc, getDoc } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { db } from '@/lib/firebase';
 
 interface Match {

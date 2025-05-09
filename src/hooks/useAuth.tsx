@@ -1,54 +1,34 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import {
-  onAuthStateChanged,
-  signOut,
-  signInWithPopup,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from 'firebase/auth';
-import { auth, googleProvider } from '@/lib/firebase';
+import { supabase } from '@/lib/supabase';
+// REMOVE THIS LINE: 
+import { useEffect, useState, createContext, useContext, ReactNode } from 'react';
+ // ✅ keep only one import
 
 interface AuthContextType {
-  user: any;
-  login: (email: string, password: string) => Promise<any>;
-  signup: (email: string, password: string) => Promise<any>;
-  logout: () => Promise<void>;
-  signInWithGoogle: () => Promise<any>;
+  user: User | null;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const AuthContext = createContext<AuthContextType>({ user: null });
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, setUser);
+    const unsubscribe = supabase.auth.onAuthStateChange((event, session) => => {
+      console.log('[useAuth] Firebase returned:', firebaseUser);
+      setUser(firebaseUser ?? null);
+    });
+
     return () => unsubscribe();
   }, []);
 
-  const login = (email: string, password: string) =>
-    signInWithEmailAndPassword(auth, email, password);
-
-  const signup = (email: string, password: string) =>
-    createUserWithEmailAndPassword(auth, email, password);
-
-  const logout = () => signOut(auth);
-
-  const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
-
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout, signInWithGoogle }}>
+    <AuthContext.Provider value={{ user }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-};
+export const useAuth = () => useContext(AuthContext);
+

@@ -1,33 +1,69 @@
-import { collection, getDocs } from 'firebase/firestore';
+// src/app/dashboard/page.tsx
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { db } from '@/lib/firebase';
-import ScoreSubmissionForm from '@/components/ScoreSubmissionForm';
+import { supabase } from '@/lib/supabase';
 
-interface Opponent {
-  id: string;
-  name: string;
-}
+export default function DashboardPage() {
+  const { user } = useAuth();
+  const [matches, setMatches] = useState<any[]>([]);
+  const [challenges, setChallenges] = useState<any[]>([]);
 
-async function getOpponents(currentUserId: string): Promise<Opponent[]> {
-  const snapshot = await getDocs(collection(db, 'users'));
-  const allUsers = snapshot.docs.map((doc) => ({
-    id: doc.id,
-    name: doc.data().name || 'Unnamed Player',
-  }));
+  useEffect(() => {
+    if (!user) return;
 
-  // Exclude current user and sort alphabetically
-  return allUsers
-    .filter((user) => user.id !== currentUserId)
-    .sort((a, b) => a.name.localeCompare(b.name));
-}
+    const fetchDashboardData = async () => {
+      const matchesRef = collection(db, 'matches');
+      const challengesRef = collection(db, 'challenges');
 
-export default async function DashboardPage() {
-  const userId = 'u789'; // Replace with actual auth user ID
-  const opponents = await getOpponents(userId);
+      const matchesSnap = await getDocs(query(matchesRef, where('players', 'array-contains', user.uid)));
+      const challengesSnap = await getDocs(query(challengesRef, where('challengerId', '==', user.uid)));
+
+      setMatches(matchesSnap.docs.map(doc => doc.data()));
+      setChallenges(challengesSnap.docs.map(doc => doc.data()));
+    };
+
+    fetchDashboardData();
+  }, [user]);
+
+  if (!user) return <p>Loading...</p>;
 
   return (
-    <main className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Submit Match Score</h1>
-      <ScoreSubmissionForm userId={userId} opponents={opponents} />
-    </main>
+    <div className="p-6 space-y-6">
+      <h1 className="text-2xl font-bold">Welcome back, {user.email}</h1>
+
+      <section>
+        <h2 className="text-xl font-semibold mb-2">Your Matches</h2>
+        <ul className="list-disc list-inside">
+          {matches.length === 0 ? (
+            <li>No matches found.</li>
+          ) : (
+            matches.map((match, i) => (
+              <li key={i}>
+                vs {match.opponentName || 'Unknown'} – {match.status || 'Pending'}
+              </li>
+            ))
+          )}
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold mb-2">Challenges Issued</h2>
+        <ul className="list-disc list-inside">
+          {challenges.length === 0 ? (
+            <li>No challenges issued.</li>
+          ) : (
+            challenges.map((challenge, i) => (
+              <li key={i}>
+                To {challenge.opponentName || 'Unknown'} – {challenge.status}
+              </li>
+            ))
+          )}
+        </ul>
+      </section>
+    </div>
   );
 }
+

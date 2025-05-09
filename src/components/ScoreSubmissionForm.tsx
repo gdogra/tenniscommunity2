@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { db } from '@/lib/firebase';
 
 interface Opponent {

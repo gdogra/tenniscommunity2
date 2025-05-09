@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase';
-import { getDoc, doc, collection, query, where, getDocs } from 'firebase/firestore';
+import { supabase } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import {
   BarChart,
